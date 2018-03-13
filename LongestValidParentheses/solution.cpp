@@ -38,3 +38,40 @@ public:
         return result - 1;
     }
 };
+/*
+class Solution {
+public:
+    
+    //[Algorithm]
+    //Leave every unmatched "(" or ")" in the stack,
+    //calculate current valid length by (current index - index in the top of the stack) 
+    //[Performance]
+    //15ms for all test case, not so good, beat only 13%.
+
+    int longestValidParentheses(string s) {
+        int result = 0;
+        list<int> stack1;
+        stack1.clear();
+        stack1.push_back(-1);
+        for(int i = 0; i < s.length(); ++i){
+            if(s[i] == '('){
+                stack1.push_back(i);
+                continue;
+            }
+            else{
+                stack1.pop_back();
+                if(stack1.empty()){
+                    stack1.push_back(i);
+                }
+                else{
+                    result = max(result, i - stack1.back());
+                }
+            }
+        }
+        return result;
+    }
+    int max(int v1, int v2){
+        return ( (v1 > v2) ? v1:v2 );
+    }
+};
+*/
