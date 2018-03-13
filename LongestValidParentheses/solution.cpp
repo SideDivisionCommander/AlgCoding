@@ -1,5 +1,13 @@
 class Solution {
 public:
+    /*
+    [Algorithm]
+    To write down every index of "(" or ")" that not matched,
+    then sort them, finally, get the largest interval, and that's
+    the answer.
+    [Performance]
+    16ms for all test case, not so good, beat only 10%.
+    */
     int longestValidParentheses(string s) {
         int result = 0;
         list<int> stack1, stack2;
