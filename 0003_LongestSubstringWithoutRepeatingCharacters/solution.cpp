@@ -1,5 +1,7 @@
 class Solution {
 public:
+    //[Performance]
+    //31ms, beat 70%, so so.
     int lengthOfLongestSubstring(string s) {
         string result, tmpResult;
         result.clear();
